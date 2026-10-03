@@ -2,7 +2,7 @@
 
 ## 1. Project Overview
 
-AI Art Detector is a machine learning tool designed to identify if an artwork is AI-generated or human-made, helping traditional and digital artists protect their work from unauthorized AI cloning and intellectual art theft.
+AI Art Detector is a machine learning tool designed to classify artwork as likely AI-generated or human-created. It provides probability estimates to help users analyze the visual characteristics of artwork.
 
 The project uses a MobileNetV3-Small image classification model trained on AI generated and human created artwork.
 
