@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffe6f2,
+        #f3e9ff,
+        #e8f5ff
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #55445f;
+}
+
+
+/* Main container */
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    padding: 25px;
+}
+
+
+/* Main card */
+
+.card {
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 30px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(130, 90, 130, 0.15);
+
+    border: 3px solid #f8c9df;
+}
+
+
+/* Heading */
+
+h1 {
+    margin-top: 0;
+
+    color: #d875a8;
+
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #8c7b91;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Upload box */
+
+.upload-box {
+    background: #fff2f8;
+
+    border: 3px dashed #edacd0;
+
+    border-radius: 25px;
+
+    padding: 30px 20px;
+
+    transition: 0.2s;
+}
+
+.upload-box:hover {
+    background: #ffeaf4;
+
+    transform: translateY(-2px);
+}
+
+
+/* Cute cat */
+
+.cat {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+/* File name */
+
+#fileName {
+    color: #8b7a91;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+
+    word-break: break-word;
+}
+
+
+/* Buttons */
+
+button {
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 13px 22px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 15px rgba(120, 80, 120, 0.15);
+}
+
+
+/* Choose button */
+
+.choose-btn {
+    background: #f4b3d2;
+
+    color: #594355;
+}
+
+
+/* Preview */
+
+.preview-container {
+    margin-top: 20px;
+}
+
+#preview {
+    display: none;
+
+    max-width: 100%;
+
+    max-height: 300px;
+
+    border-radius: 20px;
+
+    border: 4px solid #f5d1e2;
+
+    box-shadow:
+        0 8px 20px rgba(100, 70, 100, 0.12);
+}
+
+
+/* Buttons area */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Detect button */
+
+.detect-btn {
+    background: #bca7e8;
+
+    color: white;
+}
+
+.detect-btn:disabled {
+    background: #d9d1df;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* Clear button */
+
+.clear-btn {
+    background: #eee5f0;
+
+    color: #65586b;
+}
+
+
+/* Result box */
+
+.result {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: #fff8fc;
+
+    border-radius: 25px;
+
+    border: 2px solid #f1d9e8;
+}
+
+.result h2 {
+    color: #c77ba5;
+
+    margin-top: 0;
+}
+
+#prediction {
+    font-size: 24px;
+
+    color: #d875a8;
+
+    margin-bottom: 10px;
+}
+
+
+/* Probability */
+
+.probability {
+    margin-top: 18px;
+
+    text-align: left;
+}
+
+.label {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+
+/* Progress bar */
+
+.bar {
+    width: 100%;
+
+    height: 15px;
+
+    background: #eee7ef;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.ai-bar {
+    height: 100%;
+
+    width: 0%;
+
+    background: #e99fc5;
+
+    border-radius: 20px;
+
+    transition: width 1s;
+}
+
+.human-bar {
+    height: 100%;
+
+    width: 0%;
+
+    background: #b8a4e8;
+
+    border-radius: 20px;
+
+    transition: width 1s;
+}
+
+
+/* Result message */
+
+#message {
+    margin-top: 20px;
+
+    color: #8a718c;
+
+    font-weight: bold;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .card {
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+}
+.note {
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    color: #9a879d;
+
+    background: #fff0f7;
+
+    padding: 10px 15px;
+
+    border-radius: 15px;
+
+    border: 1px solid #f3d5e5;
+}
+.confidence {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.confidence-bar {
+    height: 100%;
+    width: 0%;
+    background: #d8a7e8;
+    border-radius: 20px;
+    transition: width 1s;
+}
+
+.loading {
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+.again-btn {
+    background: #f7c6df;
+    color: #60485b;
+}
+
+.again-btn:hover {
+    background: #efafd0;
+}
