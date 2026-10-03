@@ -81,7 +81,7 @@ python app.py
 
 Open `src/web/index.html` using VS Code Live Server.
 
-Upload an artwork image and click the **Detect Artwork**.
+Upload an artwork image and click the **Detect Artwork Button**.
 
 Keep the Flask server running while using the website.
 
