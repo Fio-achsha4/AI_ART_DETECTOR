@@ -1,4 +1,4 @@
-# AI Art Detector 🎨🤖
+# AI Art Detector 🎨🌸
 
 ## 1. Project Overview
 
